@@ -9,12 +9,14 @@ import android.webkit.WebViewClient
 import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.webviewinscrollviewsample.CollectionFragment.Companion.ARG_OBJECT
 
 class CollectionObjectFragment : Fragment() {
     private lateinit var webView1: WebView
     private lateinit var webView2: WebView
     private lateinit var webView3: WebView
+    private lateinit var webView4: WebView
+    private lateinit var webView5: WebView
+    private lateinit var webView6: WebView
     private lateinit var button: Button
 
     override fun onCreateView(
@@ -47,11 +49,32 @@ class CollectionObjectFragment : Fragment() {
             loadUrl("https://www.google.com/logos/doodles/2023/2023-womens-world-cup-aug-02-6753651837110065-2xa.gif")
         }
 
+        webView4 = view.findViewById(R.id.webView4)
+        webView4.apply {
+            webViewClient = WebViewClient()
+            settings.javaScriptEnabled = true
+            loadUrl("https://developers.google.com/")
+        }
+
+        webView5 = view.findViewById(R.id.webView5)
+        webView5.apply {
+            webViewClient = WebViewClient()
+            settings.javaScriptEnabled = true
+            loadUrl("https://about.google/")
+        }
+
+        webView6 = view.findViewById(R.id.webView6)
+        webView6.apply {
+            webViewClient = WebViewClient()
+            settings.javaScriptEnabled = true
+            loadUrl("https://www.google.com/logos/doodles/2023/2023-womens-world-cup-aug-02-6753651837110065-2xa.gif")
+        }
+
         button = view.findViewById(R.id.button)
         button.setOnClickListener {
             Toast.makeText(
                 context,
-                "Button ${arguments?.getInt(ARG_OBJECT)} tapped!",
+                "Button tapped!",
                 Toast.LENGTH_SHORT
             ).show()
         }
@@ -62,5 +85,8 @@ class CollectionObjectFragment : Fragment() {
         webView1.onResume()
         webView2.onResume()
         webView3.onResume()
+        webView4.onResume()
+        webView5.onResume()
+        webView6.onResume()
     }
 }

@@ -23,6 +23,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <WebView
+            android:id="@+id/webView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <WebView
+            android:id="@+id/webView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <WebView
+            android:id="@+id/webView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"

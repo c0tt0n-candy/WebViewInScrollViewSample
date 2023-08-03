@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, CollectionFragment())
+                .replace(R.id.container, CollectionObjectFragment())
                 .commit()
         }
     }
